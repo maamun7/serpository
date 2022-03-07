@@ -63,6 +63,3 @@ class Str
         return str_replace('Repository', '', $name);
     }
 }
-
-# serpository
-Generate service, repositories and inject for scalable laravel application.
