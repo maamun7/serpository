@@ -1,0 +1,23 @@
+<?php
+
+namespace {{namespace}};
+
+use {{interfaceNamespace}}\{{interfaceName}};
+
+class {{service}}
+{
+     protected {{interfaceName}} ${{paramName}};
+
+    /**
+     * @param {{interfaceName}} ${{paramName}}
+     */
+    public function __construct({{interfaceName}} ${{paramName}})
+    {
+        $this->{{paramName}} = ${{paramName}};
+    }
+
+    public function getAll()
+    {
+        return $this->{{paramName}}->all();
+    }
+}
