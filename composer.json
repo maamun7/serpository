@@ -12,7 +12,7 @@
     "type": "library",
     "keywords": ["laravel-service-repositoy", "service-repositoy", "service", "repositoy", "service-repositoy-pattern"],
     "require": {
-        "php": "^7.2|^8.0",
+        "php": "^7.4|^8.0",
         "symfony/console": "*",
         "symfony/filesystem": "*"
     },
