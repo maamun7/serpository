@@ -1,4 +1,5 @@
-## About Serpository
+
+## About Serpository (Service Repository in Laravel Application)
 Generate service, repositories and inject for scalable laravel application.
 
 ## Requirement
@@ -41,6 +42,10 @@ php artisan make:service User --r --repo=MyUser
 ```
 
 The above command will create a Service with the name `UserService` & a Repository named `MyUserRepository`. This repository also will be injected into this service automatically.
+
+## Using example with Controller
+![](/var/www/serpository/images/Screenshot-Controller.png)
+
 
 ## License
 Serpository is a free software distributed under the terms of the MIT license.
