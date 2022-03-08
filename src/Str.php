@@ -1,6 +1,6 @@
 <?php
 
-namespace Serpository;
+namespace Maamun7\Serpository;
 
 use Illuminate\Support\Str as LaravelStr;
 
