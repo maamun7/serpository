@@ -18,7 +18,7 @@ class ServiceGenerator extends Generator
      * @return Service
      * @throws Exception
      */
-    public function generate($name, Repository|null $repository): Service
+    public function generate($name, ?Repository $repository): ?Service
     {
         $service = Str::service($name);
         $filePath = $this->getServiceFilePath($service);
@@ -72,7 +72,7 @@ class ServiceGenerator extends Generator
      *
      * @return array
      */
-    public function getRepoInfo(Repository|null $repository): array
+    public function getRepoInfo(?Repository $repository): array
     {
         if ($repository === null) {
             return [];

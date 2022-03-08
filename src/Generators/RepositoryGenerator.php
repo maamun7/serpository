@@ -13,10 +13,10 @@ class RepositoryGenerator extends Generator
      *
      * @param $name
      *
-     * @return Repository
+     * @return Repository|null
      * @throws Exception
      */
-    public function generate($name): Repository
+    public function generate($name): ?Repository
     {
         $repository = Str::repository($name);
         $interface = Str::repositoryInterface($name);

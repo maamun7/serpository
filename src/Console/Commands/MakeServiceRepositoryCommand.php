@@ -80,7 +80,7 @@ class MakeServiceRepositoryCommand extends SymfonyCommand
      *
      * @return Repository|null
      */
-    public function createRepository($repositoryName): Repository|null
+    public function createRepository($repositoryName): ?Repository
     {
         $repository = null;
         $generator = new RepositoryGenerator();
