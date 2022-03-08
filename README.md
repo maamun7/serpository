@@ -1,5 +1,5 @@
 
-## About Serpository (Service Repository in Laravel Application)
+## About Serpository (Service Repository Pattern in Laravel)
 Generate service, repositories and inject for scalable laravel application.
 
 ## Requirement
