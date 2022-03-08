@@ -29,7 +29,7 @@ interface {{interface}}
      * @param array $data
      * @param int $id
      */
-    public function update(array $data, int $id)
+    public function update(array $data, int $id);
 
     /**
      * Delete a record.

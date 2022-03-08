@@ -120,7 +120,7 @@ class RepositoryGenerator extends Generator
             $modelName,
             'use ' . $this->getModelNamespace() . '\\' . $modelName,
             // 'protected ' . $modelName . ' $' . strtolower($modelName),
-            'protected ' . ' $' . strtolower($modelName),
+            'protected $' . strtolower($modelName),
             '$this->' . strtolower($modelName),
             '$' . strtolower($modelName),
         ];

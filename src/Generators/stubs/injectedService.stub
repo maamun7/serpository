@@ -9,7 +9,7 @@ class {{service}}
      protected ${{paramName}};
 
     /**
-     * @param ${{paramName}}
+     * @param {{interfaceName}} ${{paramName}}
      */
     public function __construct({{interfaceName}} ${{paramName}})
     {
