@@ -34,7 +34,7 @@ class RepositoryGenerator extends Generator
         foreach ($reposDirectories as $dir) {
             if (!$this->exists($dir)) {
                 $this->createDirectory($dir);
-                $this->createFile($dir . '/.gitkeep');
+                // $this->createFile($dir . '/.gitkeep');
             }
         }
 
@@ -119,7 +119,8 @@ class RepositoryGenerator extends Generator
         return [
             $modelName,
             'use ' . $this->getModelNamespace() . '\\' . $modelName,
-            'protected ' . $modelName . ' $' . strtolower($modelName),
+            // 'protected ' . $modelName . ' $' . strtolower($modelName),
+            'protected ' . ' $' . strtolower($modelName),
             '$this->' . strtolower($modelName),
             '$' . strtolower($modelName),
         ];

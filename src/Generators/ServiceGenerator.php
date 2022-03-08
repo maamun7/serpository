@@ -31,7 +31,7 @@ class ServiceGenerator extends Generator
 
         if (!$this->exists($serviceRootDir)) {
             $this->createDirectory($serviceRootDir);
-            $this->createFile($serviceRootDir . '/.gitkeep');
+            // $this->createFile($serviceRootDir . '/.gitkeep');
         }
 
         $namespace = $this->getServiceNamespace();

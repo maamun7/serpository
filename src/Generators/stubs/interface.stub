@@ -6,10 +6,8 @@ interface {{interface}}
 {
     /**
      * Get\'s all records.
-     *
-     * @return mixed
      */
-    public function all(): mixed;
+    public function all();
 
     /**
      * Get\'s a record by it\'s ID
@@ -22,27 +20,21 @@ interface {{interface}}
      * Create a record.
      *
      * @param array $data
-     *
-     * @return mixed
      */
-    public function create(array $data): mixed;
+    public function create(array $data);
 
     /**
      * Update a record.
      *
      * @param array $data
      * @param int $id
-     *
-     * @return mixed
      */
-    public function update(array $data, int $id): mixed;
+    public function update(array $data, int $id)
 
     /**
      * Delete a record.
      *
      * @param int $id
-     *
-     * @return mixed
      */
-    public function delete(int $id): mixed;
+    public function delete(int $id);
 }

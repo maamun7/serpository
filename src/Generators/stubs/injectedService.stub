@@ -6,10 +6,10 @@ use {{interfaceNamespace}}\{{interfaceName}};
 
 class {{service}}
 {
-     protected {{interfaceName}} ${{paramName}};
+     protected ${{paramName}};
 
     /**
-     * @param {{interfaceName}} ${{paramName}}
+     * @param ${{paramName}}
      */
     public function __construct({{interfaceName}} ${{paramName}})
     {
