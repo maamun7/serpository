@@ -5,7 +5,7 @@
 [![License](https://poser.pugx.org/maamun7/serpository/license.svg)](https://packagist.org/packages/maamun7/serpository)
 [![Total Downloads](https://img.shields.io/packagist/dt/maamun7/serpository.svg)](https://packagist.org/packages/maamun7/serpository)
 
-Many of us _Laravel_ developers like to use Service-Repository pattern in _Laravel_ applications to develop scalable application. 
+Many of us _Laravel_ developers like to use **Service-Repository** pattern in _Laravel_ applications to develop scalable application. 
 So creating these **Service**, **Repository** classes and inject them manually is very time-consuming as well as annoying at times.
 
 I faced this issue several times, that is why I developed this package to make my task easier. I strongly believe that many of us having this issue. For them, I decided to make it public.
