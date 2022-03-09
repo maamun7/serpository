@@ -1,6 +1,6 @@
 {
     "name": "maamun7/serpository",
-    "description": "Generate service, repositories and inject for scalable laravel application.",
+    "description": "Generate service, repositories and inject them easily for scalable laravel application.",
     "license": "MIT",
     "homepage": "https://github.com/maamun7/serpository",
     "authors": [
@@ -10,7 +10,16 @@
         }
     ],
     "type": "library",
-    "keywords": ["laravel-service-repositoy", "service-repositoy", "service", "repositoy", "service-repositoy-pattern"],
+    "keywords": [
+        "service",
+        "repositoy",
+        "laravel-service",
+        "laravel-repositoy",
+        "service-repositoy",
+        "service-repositoy-pattern",
+        "laravel-service-repositoy",
+        "laravel-service-repositoy-pattern"
+    ],
     "require": {
         "php": ">=7.4",
         "symfony/console": "*",
