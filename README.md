@@ -43,7 +43,8 @@ php artisan make:service User --r --repo=MyUser
 
 The above command will create a Service with the name `UserService` & a Repository named `MyUserRepository`. This repository also will be injected into this service automatically.
 
-## Using example with Controller
+## How does it work with Controller?
+#### The following example shows how it works with controller.
 ```bash
 
 namespace App\Http\Controllers;
