@@ -1,7 +1,7 @@
 
 # Serpository (Service Repository Pattern in Laravel)
-[![Build Status](https://travis-ci.org/maamun7/serpository.svg)](https://travis-ci.org/maamun7/serpository)
-[![Version](https://img.shields.io/packagist/v/maamun7/serpository.svg)](https://packagist.org/packages/zizaco/entrust)
+<!--[![Build Status](https://travis-ci.org/maamun7/serpository.svg)](https://travis-ci.org/maamun7/serpository)
+[![Version](https://img.shields.io/packagist/v/maamun7/serpository.svg)](https://packagist.org/packages/zizaco/entrust)-->
 [![License](https://poser.pugx.org/maamun7/serpository/license.svg)](https://packagist.org/packages/maamun7/serpository)
 [![Total Downloads](https://img.shields.io/packagist/dt/maamun7/serpository.svg)](https://packagist.org/packages/maamun7/serpository)
 
