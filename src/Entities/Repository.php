@@ -1,6 +1,6 @@
 <?php
 
-namespace Serpository\Entities;
+namespace Maamun7\Serpository\Entities;
 
 class Repository
 {

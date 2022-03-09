@@ -1,5 +1,10 @@
 
-## About Serpository (Service Repository Pattern in Laravel)
+# Serpository (Service Repository Pattern in Laravel)
+[![Build Status](https://travis-ci.org/maamun7/serpository.svg)](https://travis-ci.org/maamun7/serpository)
+[![Version](https://img.shields.io/packagist/v/maamun7/serpository.svg)](https://packagist.org/packages/zizaco/entrust)
+[![License](https://poser.pugx.org/maamun7/serpository/license.svg)](https://packagist.org/packages/maamun7/serpository)
+[![Total Downloads](https://img.shields.io/packagist/dt/maamun7/serpository.svg)](https://packagist.org/packages/maamun7/serpository)
+
 Generate service, repositories and inject for scalable laravel application.
 
 ## Requirement
@@ -7,9 +12,13 @@ This package requires php version >=7.4 and Laravel version >=8
 
 ## Installation
  1. Install this packages via composer: 
-
+ 
 ```bash
 composer require maamun7/serpository
+```
+ 2. Add the Serpository Service Provider to the providers array in config/app.php
+```bash
+Maamun7\Serpository\SerpositoryServiceProvider::class,
 ```
 
 ## Features
@@ -28,7 +37,7 @@ If there is no `Repositories` directory inside `app`, firstly the above command 
 
 Besides, the Repository will have an Injected `Interface` with a separate `Interfaces` directory inside the Repository.
 
-Moreover, this command will search a model inside `app\Models` directory by Repository base name and adding some suffix (e.g: suppose the provided name is User then it will search by User, Users, UserModel & User_Model). If there is a model with those names it will inject into the Repository; otherwise it will inject a model with the provided base name.
+Moreover, this command will search a model inside `app\Models` directory by provided repository name and adding some suffix (e.g: suppose the provided name is User then it will search by User, Users, UserModel & User_Model). If there is a model with those names it will inject into the Repository; otherwise it will inject a model with the provided base name.
 
 3. Create Service & Repository with the same name
 ```bash

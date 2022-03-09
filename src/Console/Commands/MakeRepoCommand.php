@@ -1,10 +1,10 @@
 <?php
 
-namespace Serpository\Console\Commands;
+namespace Maamun7\Serpository\Console\Commands;
 
 use Exception;
-use Serpository\Console\Command;
-use Serpository\Generators\RepositoryGenerator;
+use Maamun7\Serpository\Console\Command;
+use Maamun7\Serpository\Generators\RepositoryGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
 

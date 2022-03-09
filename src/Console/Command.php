@@ -1,6 +1,6 @@
 <?php
 
-namespace Serpository\Console;
+namespace Maamun7\Serpository\Console;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Serpository\Generators;
+namespace Maamun7\Serpository\Generators;
 
-use Serpository\Finder;
+use Maamun7\Serpository\Finder;
 use Symfony\Component\Filesystem\Filesystem as SymfonyFileSystem;
 
 class Generator

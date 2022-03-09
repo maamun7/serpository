@@ -1,10 +1,10 @@
 <?php
 
-namespace Serpository\Generators;
+namespace Maamun7\Serpository\Generators;
 
 use Exception;
-use Serpository\Str;
-use Serpository\Entities\Repository;
+use Maamun7\Serpository\Str;
+use Maamun7\Serpository\Entities\Repository;
 
 class RepositoryGenerator extends Generator
 {
