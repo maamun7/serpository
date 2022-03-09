@@ -1,6 +1,6 @@
 {
     "name": "maamun7/serpository",
-    "description": "Generate service, repositories and inject them easily for scalable laravel application.",
+    "description": "Generate service, repositories and inject them by an artisan command for scalable laravel application.",
     "license": "MIT",
     "homepage": "https://github.com/maamun7/serpository",
     "authors": [
