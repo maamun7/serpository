@@ -28,6 +28,11 @@ class SerpositoryServiceProvider extends ServiceProvider
 
     }
 
+    /**
+     * Bind Interface & Repository
+     *
+     * @return void
+     */
     private function registerRepositories()
     {
         foreach ($this->getBindableRepositories() as $repo) {
