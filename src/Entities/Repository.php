@@ -16,8 +16,7 @@ class Repository
         string $namespace,
         string $interfaceName,
         string $interfaceNamespace
-    )
-    {
+    ) {
         $this->title = $title;
         $this->path = $path;
         $this->namespace = $namespace;

@@ -29,7 +29,7 @@ trait Finder
      */
     public function getServiceFilePath(string $service): string
     {
-        return (!$service) ? app_path() : $this->getServicesRootPath(). DS . $service . '.php';
+        return (!$service) ? app_path() : $this->getServicesRootPath() . DS . $service . '.php';
     }
 
     /**
@@ -39,7 +39,7 @@ trait Finder
      */
     public function getServicesRootPath(): string
     {
-        return $this->getSourceRoot(). DS .'Services';
+        return $this->getSourceRoot() . DS . 'Services';
     }
 
     /**
@@ -51,7 +51,11 @@ trait Finder
      */
     public function getRepositoriesFilePath(string $repository): string
     {
-        return (!$repository) ? app_path() : $this->getRepositoriesRootPath(). DS . $repository . '.php';
+        if ((!$repository)) {
+            return app_path();
+        } else {
+            return $this->getRepositoriesRootPath() . DS . 'Eloquents' . DS . $repository . '.php';
+        }
     }
 
     /**
@@ -63,7 +67,7 @@ trait Finder
      */
     public function getInterfacesFilePath(string $interface): string
     {
-        return (!$interface) ? app_path() : $this->getInterfacesRootPath(). DS . $interface . '.php';
+        return (!$interface) ? app_path() : $this->getInterfacesRootPath() . DS . $interface . '.php';
     }
 
     /**
@@ -73,7 +77,17 @@ trait Finder
      */
     public function getRepositoriesRootPath(): string
     {
-        return $this->getSourceRoot(). DS .'Repositories';
+        return $this->getSourceRoot() . DS . 'Repositories';
+    }
+
+    /**
+     * Find the root path of all the Eloquent Repositories.
+     *
+     * @return string
+     */
+    public function getEloquentRootPath(): string
+    {
+        return $this->getRepositoriesRootPath() . DS . 'Eloquents';
     }
 
     /**
@@ -83,7 +97,7 @@ trait Finder
      */
     public function getInterfacesRootPath(): string
     {
-        return $this->getRepositoriesRootPath(). DS .'Interfaces';
+        return $this->getRepositoriesRootPath() . DS . 'Interfaces';
     }
 
     /**
@@ -117,12 +131,12 @@ trait Finder
     public function findNamespace(string $dir): string
     {
         // read composer.json file contents to determine the namespace
-        $composer = json_decode(file_get_contents(base_path(). DS .'composer.json'), true);
+        $composer = json_decode(file_get_contents(base_path() . DS . 'composer.json'), true);
 
         // see which one refers to the "src/" directory
         foreach ($composer['autoload']['psr-4'] as $namespace => $directory) {
             $directory = str_replace(['/', '\\'], DS, $directory);
-            if ($directory === $dir.DS) {
+            if ($directory === $dir . DS) {
                 return trim($namespace, '\\');
             }
         }
@@ -175,6 +189,16 @@ trait Finder
      *
      * @throws Exception
      */
+    public function getEloquentNamespace(): string
+    {
+        return $this->getRepositoryNamespace() . '\\Eloquents';
+    }
+
+    /**
+     * @return string
+     *
+     * @throws Exception
+     */
     public function getInterfaceNamespace(): string
     {
         return $this->getRepositoryNamespace() . '\\Interfaces';
@@ -206,21 +230,17 @@ trait Finder
     }
 
     /**
-     * Get bindable repositories and interfaces
-     *
-     * @return array
      * @throws Exception
      */
     protected function getBindableRepositories(): array
     {
         $repositories = [];
-        $repoDir = $this->getRepositoriesRootPath();
+        $repoDir = $this->getEloquentRootPath();
 
-        $repoNamespace = $this->getRepositoryNamespace();
+        $repoNamespace = $this->getEloquentNamespace();
         $interfaceNamespace = $this->getInterfaceNamespace();
 
-        foreach (glob("{$repoDir}/*.php") as $filename)
-        {
+        foreach (glob("{$repoDir}/*.php") as $filename) {
             $repository = str_replace('.php', '', basename($filename));
             $interface =  $repository . 'Interface';
 
@@ -233,6 +253,11 @@ trait Finder
         }
 
         return $repositories;
+    }
+
+    public function getModelsRootPath(): string
+    {
+        return $this->getSourceRoot() . DS . 'Models';
     }
 
     /**

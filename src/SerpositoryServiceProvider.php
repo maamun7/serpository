@@ -17,6 +17,9 @@ class SerpositoryServiceProvider extends ServiceProvider
         MakeServiceRepositoryCommand::class,
     ];
 
+    /**
+     * @throws \Exception
+     */
     public function register()
     {
         $this->commands($this->command);
@@ -25,11 +28,11 @@ class SerpositoryServiceProvider extends ServiceProvider
 
     public function boot()
     {
-
     }
 
     /**
      * Bind Interface & Repository
+     * @throws \Exception
      *
      * @return void
      */
