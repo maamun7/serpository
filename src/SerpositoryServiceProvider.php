@@ -31,7 +31,10 @@ class SerpositoryServiceProvider extends ServiceProvider
     }
 
     /**
+     * Bind Interface & Repository
      * @throws \Exception
+     *
+     * @return void
      */
     private function registerRepositories()
     {

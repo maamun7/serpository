@@ -11,7 +11,7 @@ if (!defined('DS')) {
 trait Finder
 {
     /**
-     * get the root of the source directory.
+     * Get the root directory of the application.
      *
      * @return string
      */
@@ -21,6 +21,8 @@ trait Finder
     }
 
     /**
+     * Get file path of service
+     *
      * @param string $service
      *
      * @return string
@@ -31,7 +33,7 @@ trait Finder
     }
 
     /**
-     * Find the root path of all the services.
+     * Get root directory of services.
      *
      * @return string
      */
@@ -41,6 +43,8 @@ trait Finder
     }
 
     /**
+     * Get file path of repository
+     *
      * @param string $repository
      *
      * @return string
@@ -54,13 +58,20 @@ trait Finder
         }
     }
 
+    /**
+     * Get root path of interfaces
+     *
+     * @param string $interface
+     *
+     * @return string
+     */
     public function getInterfacesFilePath(string $interface): string
     {
         return (!$interface) ? app_path() : $this->getInterfacesRootPath() . DS . $interface . '.php';
     }
 
     /**
-     * Find the root path of all the repositories.
+     * Get root directory of repositories
      *
      * @return string
      */
@@ -80,7 +91,7 @@ trait Finder
     }
 
     /**
-     * Find the root path of all the interfaces of all interfaces.
+     * Get root path of interface
      *
      * @return string
      */
@@ -90,7 +101,17 @@ trait Finder
     }
 
     /**
-     * Determine if a file or directory exists.
+     * Get root directory of models
+     *
+     * @return string
+     */
+    public function getModelsRootPath(): string
+    {
+        return $this->getSourceRoot(). DS .'Models';
+    }
+
+    /**
+     * Check if a file or directory exists.
      *
      * @param string $path
      *
@@ -125,6 +146,8 @@ trait Finder
 
 
     /**
+     * Get app namespace
+     *
      * @return string
      *
      * @throws Exception
@@ -136,6 +159,8 @@ trait Finder
 
 
     /**
+     * Get service namespace
+     *
      * @return string
      *
      * @throws Exception
@@ -146,6 +171,8 @@ trait Finder
     }
 
     /**
+     * Get repository namespace
+     *
      * @return string
      *
      * @throws Exception
@@ -156,6 +183,8 @@ trait Finder
     }
 
     /**
+     * Get interface namespace
+     *
      * @return string
      *
      * @throws Exception
@@ -191,6 +220,8 @@ trait Finder
     }
 
     /**
+     * Get app directory name
+     *
      * @return string
      */
     protected function getSourceDirectoryName(): string
@@ -230,6 +261,7 @@ trait Finder
     }
 
     /**
+     * Get application model directory name
      * @return string
      *
      * @throws Exception

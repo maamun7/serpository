@@ -10,6 +10,7 @@ class Str
      * Convert a value to studly caps case.
      *
      * @param  string  $value
+     *
      * @return string
      */
     public static function studly(string $value): string
@@ -22,6 +23,7 @@ class Str
      *
      * @param  string  $value
      * @param  string  $delimiter
+     *
      * @return string
      */
     public static function snake(string $value, string $delimiter = '_'): string
@@ -42,7 +44,7 @@ class Str
     }
 
     /**
-     * Get the given name formatted as a service name.
+     * Get the given name formatted as a repository name.
      *
      * @param string $name
      *
@@ -53,11 +55,25 @@ class Str
         return self::studly($name) . 'Repository';
     }
 
+    /**
+     * Get the given name as a Interface
+     *
+     * @param string $name
+     *
+     * @return string
+     */
     public static function repositoryInterface(string $name): string
     {
         return self::repository($name) . 'Interface';
     }
 
+    /**
+     * Get repository base name
+     *
+     * @param string $name
+     *
+     * @return string
+     */
     public static function model(string $name): string
     {
         return str_replace('Repository', '', $name);
