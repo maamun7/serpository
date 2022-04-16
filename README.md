@@ -39,7 +39,7 @@ If there is no `Services` directory inside `app`, firstly the above command will
 ```bash
 php artisan make:repo User  OR  php artisan make:repository User
 ```
-If there is no `Repositories` directory inside `app`, firstly the above command will create that directory and then will make a `Repository` class by the provided name with  `Repository` suffix inside that created `Repositories` directory. E.g: `UserRepository` .
+If there is no `Repositories` directory inside `app`, firstly the above command will create that directory and then will make a `Repository` class by the provided name with  `Repository` suffix inside that created `Repositories/Eloquents` directory. E.g: `UserRepository` .
 
 Besides, the Repository will have an Injected `Interface` with a separate `Interfaces` directory inside the Repository.
 
