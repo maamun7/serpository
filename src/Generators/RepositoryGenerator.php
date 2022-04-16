@@ -28,6 +28,7 @@ class RepositoryGenerator extends Generator
 
         $reposDirectories = [
             $this->getRepositoriesRootPath(),
+            $this->getEloquentRootPath(),
             $this->getInterfacesRootPath(),
         ];
 
@@ -38,16 +39,17 @@ class RepositoryGenerator extends Generator
             }
         }
 
-        $namespace = $this->getRepositoryNamespace();
+        // $namespace = $this->getRepositoryNamespace();
+        $eloquentNamespace = $this->getEloquentNamespace();
         $interfaceNamespace = $this->getInterfaceNamespace();
 
-        $this->createRepository($namespace, $repository, $filePath, $interface, $interfaceNamespace);
+        $this->createRepository($eloquentNamespace, $repository, $filePath, $interface, $interfaceNamespace);
         $this->createInterface($interface, $interfaceNamespace);
 
         return new Repository(
             $repository,
             $this->relativeFromReal($filePath),
-            $namespace,
+            $eloquentNamespace,
             $interface,
             $interfaceNamespace,
         );
