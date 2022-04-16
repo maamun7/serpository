@@ -255,11 +255,6 @@ trait Finder
         return $repositories;
     }
 
-    public function getModelsRootPath(): string
-    {
-        return $this->getSourceRoot() . DS . 'Models';
-    }
-
     /**
      * Get application model directory name
      * @return string
